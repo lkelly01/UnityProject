@@ -26,9 +26,6 @@ public class PlayerController : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
-            // Instead of accessing "moveX" and "moveY", you can directly use input.x and input.y
-            var facingDir = new Vector3(input.x, input.y);
-
             if (input != Vector2.zero)
             {
                 Vector3 targetPos = transform.position + new Vector3(input.x, input.y, 0f);
@@ -36,31 +33,13 @@ public class PlayerController : MonoBehaviour
                 if (IsWalkable(targetPos))
                 {
                     StartCoroutine(Move(targetPos));
-                    // Set IsRunning parameter in the Animator
                     Animator.SetBool("IsRunning", true);
                 }
             }
             else
             {
-                // Set IsRunning parameter to false when not moving
                 Animator.SetBool("IsRunning", false);
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-            Interact();
-    }
-
-    void Interact()
-    {
-        var facingDir = new Vector3(input.x, input.y);
-        var interactPos = transform.position + facingDir;
-        // Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
-
-        var collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
-
-        if (collider != null)
-        {
-            Debug.Log("there is an NPC here! ");
         }
     }
 
@@ -75,13 +54,31 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
 
-        transform.position = targetPos; // Make sure to set the final position after the loop
-
+        transform.position = targetPos; // Set the final position after the loop
         isMoving = false;
+
+        // Call Interact() after the player has finished moving
+        Interact();
+    }
+
+    void Interact()
+    {
+        // Calculate the interact position based on the player's facing direction
+        Vector3 facingDir = new Vector3(input.x, input.y);
+        Vector3 interactPos = transform.position + facingDir;
+
+        // Perform the overlap circle check
+        Collider2D collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
+
+        if (collider != null)
+        {
+            collider.GetComponent<Interactable>()?.Interact();
+        }
     }
 
     private bool IsWalkable(Vector3 targetPos)
     {
+        // Perform overlap circle check for both solid objects and interactable objects
         Collider2D collider = Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer | interactableLayer);
         return (collider == null);
     }
