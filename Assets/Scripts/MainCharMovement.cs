@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    public Animator Animator; // Ensure this matches the variable name in your script
+    public Animator Animator; 
 
     private bool isMoving;
     private Vector2 input;
@@ -82,4 +82,12 @@ public class PlayerController : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer | interactableLayer);
         return (collider == null);
     }
+        void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            Debug.Log("Item Picked Up");
+            collision.gameObject.GetComponent<Item>().ItemPickedUp();
+        }
+    } 
 }
