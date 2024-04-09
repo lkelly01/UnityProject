@@ -10,6 +10,18 @@ public class GameController : MonoBehaviour
 
     GameState state;
 
+    private void Start()
+    {
+        DialogManager.Instance.OnShowDialog += () =>
+        {
+            state = GameState.Dialog;
+        };
+        DialogManager.Instance.OnHideDialog += () =>
+        {
+            if (state == GameState.Dialog)
+                state = GameState.Freeroam;
+        };
+    }
     private void Update()
     {
         if(state == GameState.Freeroam)
@@ -18,7 +30,7 @@ public class GameController : MonoBehaviour
         }
         else if (state == GameState.Dialog)
         {
-            // Logic for dialog state
+            DialogManager.Instance.HandleUpdate();
         }
         else if (state == GameState.Battle)
         {
