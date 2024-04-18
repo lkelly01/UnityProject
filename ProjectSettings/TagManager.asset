@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Item
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -13,15 +12,15 @@ TagManager:
   - Water
   - UI
   - 
+  - 
   - SolidObjects
+  - LongGrass
   - Interactable
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - FovLayer
+  - PortalLayer
+  - Triggers
+  - Ledges
   - 
   - 
   - 
@@ -43,14 +42,14 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 2319308835
+    uniqueID: 1565709309
     locked: 0
   - name: Foreground
-    uniqueID: 3014199299
+    uniqueID: 1893782581
     locked: 0
-  - name: Player
-    uniqueID: 2633024951
+  - name: Objects
+    uniqueID: 2519558609
     locked: 0
-  - name: 
-    uniqueID: 966099109
+  - name: Battle
+    uniqueID: 2633506547
     locked: 0
