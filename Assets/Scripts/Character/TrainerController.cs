@@ -10,13 +10,15 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     [SerializeField] Dialog dialogAfterBattle;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
-
     [SerializeField] AudioClip trainerAppearsClip;
+    [SerializeField] ItemBase itemToGiveAfterDefeat;
+    [SerializeField] int itemCountToGive = 1;
 
     // State
     bool battleLost = false;
 
     Character character;
+    
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -77,9 +79,39 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
     public void BattleLost()
     {
-        battleLost = true;
-        fov.gameObject.SetActive(false);
+    battleLost = true;
+    fov.gameObject.SetActive(false);
+
+    // Retrieve the player controller from the GameController
+    PlayerController playerController = GameController.Instance.PlayerController;
+
+    // Give item to the player after defeat
+    if (playerController != null)
+    {
+        GiveItemToPlayer(playerController);
     }
+    else
+    {
+        Debug.LogWarning("Player controller not found.");
+    }
+}
+
+
+
+    public void GiveItemToPlayer(PlayerController player)
+    {
+    if (player != null && itemToGiveAfterDefeat != null && itemCountToGive > 0)
+    {
+        player.GetComponent<Inventory>().AddItem(itemToGiveAfterDefeat, itemCountToGive);
+        Debug.Log($"Received {itemCountToGive} {itemToGiveAfterDefeat.Name}(s) from the defeated trainer.");
+    }
+    else
+    {
+        Debug.LogWarning("Player or item information not found.");
+    }
+}
+
+
 
     public void SetFovRotation(FacingDirection dir)
     {

@@ -47,7 +47,7 @@ public class Quest
         var inventory = Inventory.GetInventory();
         if (Base.RequiredItem != null)
         {
-            inventory.RemoveItem(Base.RequiredItem);
+            inventory.RemoveItem(Base.RequiredItem); // Original removal for the single required item
         }
 
         if (Base.RewardItem != null)

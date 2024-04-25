@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class SavingSystem : MonoBehaviour
 {
     public static SavingSystem i { get; private set; }
+    
     private void Awake()
     {
         i = this;
@@ -18,17 +19,53 @@ public class SavingSystem : MonoBehaviour
 
     public void CaptureEntityStates(List<SavableEntity> savableEntities)
     {
+        if (savableEntities == null)
+        {
+            Debug.LogError("savableEntities is null.");
+            return;
+        }
+
         foreach (SavableEntity savable in savableEntities)
         {
+            if (savable == null)
+            {
+                Debug.LogError("Found a null SavableEntity in savableEntities.");
+                continue;
+            }
+
+            if (string.IsNullOrEmpty(savable.UniqueId))
+            {
+                Debug.LogError("UniqueId is null or empty for a SavableEntity.");
+                continue;
+            }
+
             gameState[savable.UniqueId] = savable.CaptureState();
         }
     }
 
     public void RestoreEntityStates(List<SavableEntity> savableEntities)
     {
+        if (savableEntities == null)
+        {
+            Debug.LogError("savableEntities is null.");
+            return;
+        }
+
         foreach (SavableEntity savable in savableEntities)
         {
+            if (savable == null)
+            {
+                Debug.LogError("Found a null SavableEntity in savableEntities.");
+                continue;
+            }
+
             string id = savable.UniqueId;
+            if (string.IsNullOrEmpty(id))
+            {
+                Debug.LogError("UniqueId is null or empty for a SavableEntity.");
+                continue;
+            }
+
             if (gameState.ContainsKey(id))
                 savable.RestoreState(gameState[id]);
         }
@@ -56,6 +93,18 @@ public class SavingSystem : MonoBehaviour
     {
         foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
         {
+            if (savable == null)
+            {
+                Debug.LogError("Found a null SavableEntity in the scene.");
+                continue;
+            }
+
+            if (string.IsNullOrEmpty(savable.UniqueId))
+            {
+                Debug.LogError("UniqueId is null or empty for a SavableEntity.");
+                continue;
+            }
+
             state[savable.UniqueId] = savable.CaptureState();
         }
     }
@@ -65,7 +114,19 @@ public class SavingSystem : MonoBehaviour
     {
         foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
         {
+            if (savable == null)
+            {
+                Debug.LogError("Found a null SavableEntity in the scene.");
+                continue;
+            }
+
             string id = savable.UniqueId;
+            if (string.IsNullOrEmpty(id))
+            {
+                Debug.LogError("UniqueId is null or empty for a SavableEntity.");
+                continue;
+            }
+
             if (state.ContainsKey(id))
                 savable.RestoreState(state[id]);
         }
@@ -73,8 +134,21 @@ public class SavingSystem : MonoBehaviour
 
     public void RestoreEntity(SavableEntity entity)
     {
-        if (gameState.ContainsKey(entity.UniqueId))
-            entity.RestoreState(gameState[entity.UniqueId]);
+        if (entity == null)
+        {
+            Debug.LogError("Entity is null.");
+            return;
+        }
+
+        string id = entity.UniqueId;
+        if (string.IsNullOrEmpty(id))
+        {
+            Debug.LogError("UniqueId is null or empty for the entity.");
+            return;
+        }
+
+        if (gameState.ContainsKey(id))
+            entity.RestoreState(gameState[id]);
     }
 
     void SaveFile(string saveFile, Dictionary<string, object> state)

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b45ea32d2fec5d6468030b40aa8ebe1e
+  - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
+    guid: 88e42332048bd2249901b3769124e9cf
+  - enabled: 1
     path: Assets/Scenes/HomeTown.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -20,4 +26,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enemy1.unity
     guid: c8f96ca0a07af734e93170b2031e9c9d
+  - enabled: 1
+    path: Assets/Scenes/Route2.unity
+    guid: ed197cfdb52407f4ea226ba0d72496c0
+  - enabled: 1
+    path: Assets/Scenes/Town4.unity
+    guid: 9ba84074d2e5f944aa90174d874f8079
+  - enabled: 1
+    path: Assets/Scenes/Route3.unity
+    guid: 270af60d7ab174642a87db856c29c101
+  - enabled: 1
+    path: Assets/Scenes/Town3.unity
+    guid: e10b49495a356384ba154a82af4d59f2
+  - enabled: 1
+    path: Assets/Scenes/Route4.unity
+    guid: ebaadb3651786c947a9c52359a90f701
+  - enabled: 1
+    path: Assets/Scenes/Route5.unity
+    guid: 2207b380282c6504590c1e0640f23338
+  - enabled: 1
+    path: Assets/Scenes/Town5.unity
+    guid: c7004f5f644e4db42a0f71d1775f7ade
+  - enabled: 1
+    path: Assets/Scenes/FinalBoss.unity
+    guid: b4b1799cc10822d43970c8b592517cb3
   m_configObjects: {}

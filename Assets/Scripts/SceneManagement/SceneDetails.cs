@@ -31,12 +31,12 @@ public class SceneDetails : MonoBehaviour
                 scene.LoadScene();
             }
 
-            // Unload the scenes that ar no longer connected
+            // Unload the scenes that are no longer connected
             var prevScene = GameController.Instance.PrevScene;
             if (prevScene != null)
             {
-                var previoslyLoadedScenes = prevScene.connectedScenes;
-                foreach (var scene in previoslyLoadedScenes)
+                var previouslyLoadedScenes = prevScene.connectedScenes;
+                foreach (var scene in previouslyLoadedScenes)
                 {
                     if (!connectedScenes.Contains(scene) && scene != this)
                         scene.UnloadScene();
@@ -58,28 +58,44 @@ public class SceneDetails : MonoBehaviour
             operation.completed += (AsyncOperation op) =>
             {
                 savableEntities = GetSavableEntitiesInScene();
-                SavingSystem.i.RestoreEntityStates(savableEntities);
+                if (savableEntities != null)
+                {
+                    SavingSystem.i.RestoreEntityStates(savableEntities);
+                }
+                else
+                {
+                    Debug.LogError("No savable entities found in the scene.");
+                }
             };
         }
     }
 
     public void UnloadScene()
+{
+    if (IsLoaded)
     {
-        if (IsLoaded)
+        if (savableEntities != null)
         {
             SavingSystem.i.CaptureEntityStates(savableEntities);
-
-            SceneManager.UnloadSceneAsync(gameObject.name);
-            IsLoaded = false;
         }
+        else
+        {
+            Debug.LogWarning("savableEntities is null. Skipping capture process.");
+        }
+
+        SceneManager.UnloadSceneAsync(gameObject.name);
+        IsLoaded = false;
     }
+}
+
 
     List<SavableEntity> GetSavableEntitiesInScene()
     {
-        var currScene = SceneManager.GetSceneByName(gameObject.name);
-        var savableEntities = FindObjectsOfType<SavableEntity>().Where(x => x.gameObject.scene == currScene).ToList();
-        return savableEntities;
+    var currScene = SceneManager.GetSceneByName(gameObject.name);
+    var savableEntities = FindObjectsOfType<SavableEntity>().Where(x => x.gameObject.scene == currScene).ToList();
+    return savableEntities;
     }
+
 
     public AudioClip SceneMusic => sceneMusic;
 }

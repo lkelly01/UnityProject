@@ -12,7 +12,7 @@ public class QuestBase : ScriptableObject
     [SerializeField] Dialog inProgressDialogue;
     [SerializeField] Dialog completedDialogue;
 
-    [SerializeField] ItemBase requiredItem;
+    [SerializeField] ItemBase requiredItem; // Original single required item
     [SerializeField] ItemBase rewardItem;
 
     public string Name => name;
@@ -22,6 +22,8 @@ public class QuestBase : ScriptableObject
     public Dialog InProgressDialogue => inProgressDialogue?.Lines?.Count > 0 ? inProgressDialogue : startDialogue;
     public Dialog CompletedDialogue => completedDialogue;
 
-    public ItemBase RequiredItem => requiredItem;
+    public ItemBase RequiredItem => requiredItem; // Original getter for the single required item
     public ItemBase RewardItem => rewardItem;
 }
+
+

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bc05e0f2dc08a41849d2fa9ab61916, type: 3}
+  m_Name: Badge 3
+  m_EditorClassIdentifier: 
+  name: Badge 2 Unlock
+  description: Help unlock the villans lair with the first badge
+  startDialogue:
+    lines:
+    - Hey if you beat the boss on the following route you can get the final key to
+      break their force field
+  inProgressDialogue:
+    lines:
+    - We believe in you!
+  completedDialogue:
+    lines:
+    - You're ready now!
+  requiredItem: {fileID: 0}
+  rewardItem: {fileID: 0}
