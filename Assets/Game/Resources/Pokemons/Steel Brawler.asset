@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aa4a7f37a22714c9924381e9ade610, type: 3}
+  m_Name: Steel Brawler
+  m_EditorClassIdentifier: 
+  name: Steel Brawler
+  description: Normal type robot who specalizes in attack
+  frontSprite: {fileID: 21300000, guid: dfca00d3f279a61419622e11c7b9dba2, type: 3}
+  backSprite: {fileID: 21300000, guid: 2acd1d609b7e4de489b31917995e107a, type: 3}
+  type1: 1
+  type2: 0
+  maxHp: 100
+  attack: 175
+  defense: 100
+  spAttack: 175
+  spDefense: 100
+  speed: 100
+  catchRate: 255
+  expYield: 65
+  growthRate: 0
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 860867a0bde2f0c4386894a6d453402e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 1e253e69e3c46ac46a0c6560ca53ee82, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: ba15135c9e5c65e4280f33ae6bb8eb89, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: f95d32a44d603af498bf02812bd54948, type: 2}
+    level: 11
+  - moveBase: {fileID: 11400000, guid: 20e909c6b7042af43ad43490708d757f, type: 2}
+    level: 19
+  learnableByItems: []
+  evolutions: []

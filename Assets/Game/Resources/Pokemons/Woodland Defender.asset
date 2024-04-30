@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aa4a7f37a22714c9924381e9ade610, type: 3}
+  m_Name: Woodland Defender
+  m_EditorClassIdentifier: 
+  name: Woodland Defender
+  description: Grass type robot who specilizes in defense
+  frontSprite: {fileID: 21300000, guid: 2f7b8708fa659de44a09b2480f1a18d4, type: 3}
+  backSprite: {fileID: 21300000, guid: 0a45fc09a28f529468ed7a46ade00250, type: 3}
+  type1: 5
+  type2: 0
+  maxHp: 175
+  attack: 90
+  defense: 150
+  spAttack: 90
+  spDefense: 150
+  speed: 75
+  catchRate: 255
+  expYield: 65
+  growthRate: 0
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: ba15135c9e5c65e4280f33ae6bb8eb89, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 961fe281d2401b54e84bb83068db1b23, type: 2}
+    level: 5
+  - moveBase: {fileID: 11400000, guid: 429069acf8c0b7c4da3ae0a264835a91, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: 2224ebec495d98c4da6910eb0755a107, type: 2}
+    level: 17
+  - moveBase: {fileID: 11400000, guid: 83d30022e2022af43ad035767e6d97dd, type: 2}
+    level: 25
+  learnableByItems:
+  - {fileID: 11400000, guid: 860867a0bde2f0c4386894a6d453402e, type: 2}
+  evolutions: []

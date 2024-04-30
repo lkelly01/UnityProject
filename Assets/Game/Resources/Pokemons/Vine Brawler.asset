@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aa4a7f37a22714c9924381e9ade610, type: 3}
+  m_Name: Vine Brawler
+  m_EditorClassIdentifier: 
+  name: Vine Brawler
+  description: Grass type robot who specalizes in attack
+  frontSprite: {fileID: 21300000, guid: b4e37bafaa9357f458a5ecaa81ca48bb, type: 3}
+  backSprite: {fileID: 21300000, guid: 9b62615ccd072d049871deb44a36da03, type: 3}
+  type1: 5
+  type2: 0
+  maxHp: 100
+  attack: 175
+  defense: 100
+  spAttack: 175
+  spDefense: 100
+  speed: 100
+  catchRate: 255
+  expYield: 65
+  growthRate: 0
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 44552df90c8e1634eabe15dd539d45eb, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 860867a0bde2f0c4386894a6d453402e, type: 2}
+    level: 5
+  - moveBase: {fileID: 11400000, guid: 1e253e69e3c46ac46a0c6560ca53ee82, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: 20e909c6b7042af43ad43490708d757f, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: a2d30b94760ac6546b6b0afb591e89c4, type: 2}
+    level: 19
+  learnableByItems: []
+  evolutions: []

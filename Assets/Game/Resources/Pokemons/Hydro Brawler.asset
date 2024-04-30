@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aa4a7f37a22714c9924381e9ade610, type: 3}
+  m_Name: Hydro Brawler
+  m_EditorClassIdentifier: 
+  name: Hydro Brawler
+  description: Water type robot who specalizes in attack
+  frontSprite: {fileID: 21300000, guid: 84d67b9f81e34444d846a3846972fc5d, type: 3}
+  backSprite: {fileID: 21300000, guid: 8d5c82db1e7b94244956e73b709c346a, type: 3}
+  type1: 3
+  type2: 0
+  maxHp: 100
+  attack: 175
+  defense: 100
+  spAttack: 175
+  spDefense: 100
+  speed: 100
+  catchRate: 255
+  expYield: 65
+  growthRate: 0
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 860867a0bde2f0c4386894a6d453402e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 892e49f879cfab346acbf59b38cc975d, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: 2224ebec495d98c4da6910eb0755a107, type: 2}
+    level: 11
+  - moveBase: {fileID: 11400000, guid: 49c86a10e7b6cb549ab956749aa6a95e, type: 2}
+    level: 13
+  - moveBase: {fileID: 11400000, guid: 236a602d6204c244bb6a5f386de98416, type: 2}
+    level: 17
+  - moveBase: {fileID: 11400000, guid: f95d32a44d603af498bf02812bd54948, type: 2}
+    level: 22
+  learnableByItems: []
+  evolutions: []
