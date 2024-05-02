@@ -37,9 +37,27 @@ public class GameMenuState : State<GameController>
     void OnMenuItemSelected(int selection)
     {
         if (selection == 0) // Pokemon
+        {
             gc.StateMachine.Push(PartyState.i);
+        }
         else if (selection == 1) // Bag
+        {
             gc.StateMachine.Push(InventoryState.i);
+        }
+        else if (selection == 2) // Save
+        {
+            SavingSystem.i.Save("gameSave.save"); // Assume "gameSave.save" is your save file name
+        }
+        else if (selection == 3) // Load
+        {
+            SavingSystem.i.Load("gameSave.save");
+        }
+        else if (selection == 4)//quit
+            Application.Quit();
+        else
+        {
+            Debug.LogError("Unknown menu selection!");
+        }
     }
 
     void OnBack()
@@ -47,3 +65,4 @@ public class GameMenuState : State<GameController>
         gc.StateMachine.Pop();
     }
 }
+

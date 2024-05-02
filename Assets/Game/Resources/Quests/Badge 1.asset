@@ -16,8 +16,8 @@ MonoBehaviour:
   description: Help unlock the villans lair with the first badge
   startDialogue:
     lines:
-    - Hey if you beat the boss on the following route you can get key one to break
-      their force field
+    - If you beat the boss of the area above route 1 you can get past the first row
+      of flowers
   inProgressDialogue:
     lines:
     - We believe in you!

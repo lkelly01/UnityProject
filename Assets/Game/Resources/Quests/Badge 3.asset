@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20bc05e0f2dc08a41849d2fa9ab61916, type: 3}
   m_Name: Badge 3
   m_EditorClassIdentifier: 
-  name: Badge 2 Unlock
-  description: Help unlock the villans lair with the first badge
+  name: Badge 3 Unlock
+  description: Help unlock the villans lair with the final badge
   startDialogue:
     lines:
-    - Hey if you beat the boss on the following route you can get the final key to
-      break their force field
+    - Hey if you beat the boss on the route 4 you can get the final key to break
+      their force field
   inProgressDialogue:
     lines:
     - We believe in you!
@@ -25,4 +25,4 @@ MonoBehaviour:
     lines:
     - You're ready now!
   requiredItem: {fileID: 11400000, guid: ce5d54cdbc47fc64197642bdc2efd8a4, type: 2}
-  rewardItem: {fileID: 0}
+  rewardItem: {fileID: 11400000, guid: 3b87f30af617d9d49b798cdbf5c71a12, type: 2}

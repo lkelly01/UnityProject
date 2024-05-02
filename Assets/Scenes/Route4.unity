@@ -15312,6 +15312,135 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &539045811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2224387269947086127, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: uniqueId
+      value: 5e15ac62-5adf-458b-9663-b77b38c25203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782546998839390800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782546998839390800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782546998839390800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782546998839390800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: I bought some pokeballs from the mart next town
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782546998839390800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: You can have some
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -160.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318809, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: questToStart
+      value: 
+      objectReference: {fileID: 11400000, guid: b260c17bbfcc16f45b2d3648d46c5b59,
+        type: 2}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: questToComplete
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Good Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b018929b598059b4094cde9873294efc, type: 3}
 --- !u!1 &792046905
 GameObject:
   m_ObjectHideFlags: 0
@@ -24486,11 +24615,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trainer 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.data[0]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: e970ffb42c3395746bcf94174c5a9a3e,
+        type: 2}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.data[0].level
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.data[1]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 819472b474038894f81c1186f1451077,
+        type: 2}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.data[1].level
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.data[2]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: a5f19143304a92e4f84d70383aaa937f,
+        type: 2}
+    - target: {fileID: 3483163131377622420, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
+        type: 3}
+      propertyPath: pokemons.Array.data[2].level
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3483163131377622423, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
         type: 3}
       propertyPath: itemToGiveAfterDefeat
       value: 
-      objectReference: {fileID: 11400000, guid: 242ee7f8fc6a61b4d8f3dddf71168d6e,
+      objectReference: {fileID: 11400000, guid: ce5d54cdbc47fc64197642bdc2efd8a4,
         type: 2}
     - target: {fileID: 3483163131377622425, guid: eb62a8f8dd6e2e043a29df0f7fa250b6,
         type: 3}
@@ -24637,3 +24804,4 @@ SceneRoots:
   - {fileID: 1647539229}
   - {fileID: 1960840530}
   - {fileID: 9082499264396003532}
+  - {fileID: 539045811}

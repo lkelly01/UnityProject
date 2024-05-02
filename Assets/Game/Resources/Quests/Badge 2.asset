@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Badge 2
   m_EditorClassIdentifier: 
   name: Badge 2 Unlock
-  description: Help unlock the villans lair with the first badge
+  description: Help unlock the villans lair with the second badge
   startDialogue:
     lines:
-    - Hey if you beat the boss on the following route you can get key one to break
-      their force field
+    - if you beat the boss on route 3
   inProgressDialogue:
     lines:
     - We believe in you!

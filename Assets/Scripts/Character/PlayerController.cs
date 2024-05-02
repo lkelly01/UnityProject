@@ -81,25 +81,14 @@ public class PlayerController : MonoBehaviour, ISavable
 
     public object CaptureState()
     {
-        var saveData = new PlayerSaveData()
-        {
-            position = new float[] { transform.position.x, transform.position.y },
-            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList()
-        };
-
-        return saveData;
+        float[] position=new float[] {transform.position.x,transform.position.y};
+        return position;
     }
 
     public void RestoreState(object state)
     {
-        var saveData = (PlayerSaveData)state;
-
-        // Restore Position
-        var pos = saveData.position;
-        transform.position = new Vector3(pos[0], pos[1]);
-
-        // Restore Party
-        GetComponent<PokemonParty>().Pokemons = saveData.pokemons.Select(s => new Pokemon(s)).ToList();
+        var position=(float[])state;
+        transform.position = new Vector3(position[0],position[1]);
     }
 
     public string Name {
